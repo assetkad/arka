@@ -1,0 +1,105 @@
+.header {
+  height: $headerHeight;
+  box-shadow: 0px 14px 44px rgba(84, 84, 84, 0.25);
+
+  // .header__container
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__menu
+  &__menu {}
+
+  // .header__shedule
+  &__shedule {
+    display: flex;
+    align-items: center;
+
+    // @include adaptiveValue('margin-right', 25, 5, 0);
+    // @media (max-width: 768.98px) {
+    //   margin-left: auto;
+    // }
+    &>div {
+      @include adaptiveValue('padding-right', 25, 5, 0);
+      @include adaptiveValue('padding-left', 25, 5, 0);
+
+    }
+  }
+
+  // .header__burger-btn
+  &__burger-btn {
+    @media (max-width: 768.98px) {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      margin-left: 10px;
+
+      &:hover {
+        & svg {
+          & path {
+            transition: $standartTrans;
+            fill: $redColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  @media (max-width: 768.98px) {
+    display: none;
+  }
+
+  // .menu__list
+  &__list {
+    display: flex;
+  }
+
+  // .menu__item
+  &__item:first-child {
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url('../images/icons/three_stars.svg') center center/cover no-repeat;
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      left: -10px;
+      top: 22px;
+    }
+  }
+
+  &__item {
+    transition: $standartTrans;
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-right', 30, 5, 2);
+    }
+
+  }
+
+  // .menu__link
+  &__link {
+    height: 100%;
+    @include adaptiveValue('margin-left', 18, 5, 0);
+    // @include adaptiveValue('margin-right', 18, 5, 0);
+    @include adaptiveFont(14, 11);
+    line-height: $headerHeight;
+    text-transform: uppercase;
+    transition: $standartTrans;
+
+    &:hover {
+      // background: $blackColor;
+      // outline: 1px solid $blackColor;
+      border-bottom: 1px solid;
+      margin-bottom: -1px;
+    }
+  }
+}

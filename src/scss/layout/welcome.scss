@@ -1,0 +1,70 @@
+.welcome {
+    background: url('../images/four-img.png') no-repeat;
+    background-position: top 87px right;
+    @include adaptiveValue('padding-top', 145, 25, 1);
+
+    &__container {
+        height: 100%;
+
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include adaptiveFont(48, 23);
+        @include adaptiveValue('width', 480, 290, 1);
+    }
+
+    &__subtitle {
+        @include adaptiveFont(15, 14);
+        @include adaptiveValue('margin-top', 33, 20, 0);
+    }
+
+    &__btn {
+        font-weight: 700;
+        letter-spacing: 1.96px;
+        border: none;
+        background-color: $bluegreyColor;
+        border-radius: 44px;
+        @include adaptiveValue('padding-top', 20, 14, 1);
+        @include adaptiveValue('padding-bottom', 20, 14, 1);
+        @include adaptiveValue('padding-right', 30, 20, 1);
+        @include adaptiveValue('padding-left', 30, 20, 1);
+        color: $whiteColor;
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+
+    &__sponsors {}
+}
+
+// sponsors
+.sponsors {
+    &__list {
+        margin-top: 225px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        margin-right: 15px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.6px;
+        color: #A1A1A1;
+        width: 90px;
+    }
+}
