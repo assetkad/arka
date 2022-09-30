@@ -1,5 +1,6 @@
 .welcome {
-    background: url('../images/four-img.png') no-repeat;
+    background-image: url('../images/four-img.png');
+    background-repeat: no-repeat;
     background-position: top 87px right;
     @include adaptiveValue('padding-top', 145, 25, 1);
 
