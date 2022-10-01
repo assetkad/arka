@@ -4,11 +4,15 @@ $mainFont: 'Roboto', sans-serif;
 $headerHeight: 60px;
 $footerHeight: 365px;
 
+$container-nowidth: 1920px;
+
 $whiteColor: #fff;
 $blackColor: #131313;
 $grayColor: #6f6f6f;
 $redColor: #ff4040;
 $bluegreyColor: #3D5675;
+$blueDarker: #011F3A;
+
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
@@ -28,4 +32,4 @@ $hoverBoxShadow:  0 0 5px 0 rgba(#000, 15%),
 
 $standartTrans: all 280ms ease 0ms;
 
-$mainRadius: 10px;
+$mainRadius: 44px;

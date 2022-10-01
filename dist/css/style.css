@@ -152,7 +152,7 @@ h6 {
 }
 
 [class*=__container-nowidth] {
-  max-width: 100%;
+  max-width: 1920px;
 }
 
 .header {
@@ -346,13 +346,11 @@ h6 {
   background-image: url("../images/four-img.png"); }
 
 .welcome {
+  background-color: #F2AE4D;
   background-repeat: no-repeat;
   background-position: top 87px right;
+  height: calc(100vh - 60px);
   padding-top: 145px;
-}
-
-.welcome__container {
-  height: 100%;
 }
 
 .welcome__nav {
@@ -390,8 +388,11 @@ h6 {
   margin-top: 15px;
 }
 
-.sponsors__list {
-  margin-top: 225px;
+.sponsor {
+  padding: 20px 0 20px 0;
+}
+
+.sponsor__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,7 +406,7 @@ h6 {
           justify-content: space-between;
 }
 
-.sponsors__item {
+.sponsor__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,16 +415,60 @@ h6 {
           align-items: center;
 }
 
-.sponsors__img {
+.sponsor__img {
   margin-right: 15px;
 }
 
-.sponsors__text {
+.sponsor__text {
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 0.6px;
   color: #A1A1A1;
   width: 90px;
+}
+
+.products__title {
+  font-size: calc(22px + 10 * ((100vw - 320px) / 880));
+  line-height: 38px;
+  color: #011F3A;
+  display: inline-block;
+}
+
+.products__btn {
+  float: right;
+  font-weight: 700;
+  letter-spacing: 1.96px;
+  border: none;
+  background-color: #3D5675;
+  border-radius: 44px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 25px;
+  padding-left: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.products__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[3];
+  grid-template-columns: repeat(3, 400px);
+  -ms-grid-rows: (432px)[2];
+  grid-template-rows: repeat(2, 432px);
+  gap: 1px;
+}
+
+.products__item {
+  display: block;
+  height: 432px;
+  width: 400px;
+  background-color: #011F3A;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1/1/3/4;
 }
 
 .popup-menu {
@@ -541,6 +586,22 @@ h6 {
 
   .welcome__btn {
     padding-left: calc(20px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .products__btn {
+    padding-top: calc(8px + 5 * ((100vw - 320px) / 880));
+  }
+
+  .products__btn {
+    padding-bottom: calc(8px + 5 * ((100vw - 320px) / 880));
+  }
+
+  .products__btn {
+    padding-right: calc(13px + 12 * ((100vw - 320px) / 880));
+  }
+
+  .products__btn {
+    padding-left: calc(13px + 12 * ((100vw - 320px) / 880));
   }
 }
 

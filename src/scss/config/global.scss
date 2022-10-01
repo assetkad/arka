@@ -30,5 +30,5 @@
   padding: 0 $mainOffset;
 }
 [class*="__container-nowidth"] {
-  max-width: 100%;
+  max-width: $container-nowidth;
 }
