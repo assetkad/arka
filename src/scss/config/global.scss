@@ -25,10 +25,10 @@
   }
 }
 [class*="__container"] {
-  max-width: 1170px + $mainOffset * 2;
+  max-width: 1200px + $mainOffset * 2;
   margin: 0 auto;
   padding: 0 $mainOffset;
 }
 [class*="__container-nowidth"] {
   max-width: $container-nowidth;
-}
+} 

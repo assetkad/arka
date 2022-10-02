@@ -146,7 +146,7 @@ h6 {
 }
 
 [class*=__container] {
-  max-width: 1200px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -221,7 +221,6 @@ h6 {
 .menu__link {
   height: 100%;
   margin-left: calc(5px + 13 * ((100vw - 320px) / 1600));
-  font-size: calc(11px + 3 * ((100vw - 320px) / 880));
   line-height: 60px;
   text-transform: uppercase;
   -webkit-transition: all 280ms ease 0ms;
@@ -364,12 +363,10 @@ h6 {
 }
 
 .welcome__title {
-  font-size: calc(23px + 25 * ((100vw - 320px) / 880));
   width: 480px;
 }
 
 .welcome__subtitle {
-  font-size: calc(14px + 1 * ((100vw - 320px) / 880));
   margin-top: calc(20px + 13 * ((100vw - 320px) / 1600));
 }
 
@@ -380,8 +377,8 @@ h6 {
   background-color: #3D5675;
   border-radius: 44px;
   padding-top: 20px;
-  padding-bottom: 20px;
   padding-right: 30px;
+  padding-bottom: 20px;
   padding-left: 30px;
   color: #fff;
   text-transform: uppercase;
@@ -427,15 +424,32 @@ h6 {
   width: 90px;
 }
 
+.products {
+  background-color: #EEEEEE;
+  padding-top: 57px;
+  padding-bottom: 50px;
+}
+
+.products__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 57px;
+}
+
 .products__title {
-  font-size: calc(22px + 10 * ((100vw - 320px) / 880));
   line-height: 38px;
   color: #011F3A;
   display: inline-block;
 }
 
 .products__btn {
-  float: right;
   font-weight: 700;
   letter-spacing: 1.96px;
   border: none;
@@ -452,23 +466,23 @@ h6 {
 .products__items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (400px)[3];
-  grid-template-columns: repeat(3, 400px);
-  -ms-grid-rows: (432px)[2];
-  grid-template-rows: repeat(2, 432px);
+  grid-template: repeat(auto-fill, minmax(432px, auto))/repeat(3, 400px);
+  grid-auto-rows: minmax(432px, auto);
   gap: 1px;
 }
 
 .products__item {
-  display: block;
-  height: 432px;
-  width: 400px;
-  background-color: #011F3A;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: 1/1/3/4;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .popup-menu {
@@ -559,6 +573,24 @@ h6 {
   margin-bottom: 10px;
 }
 
+@media (min-width: 767px) {
+  .menu__link {
+    font-size: calc(11px + 3 * (100vw / 1920));
+  }
+
+  .welcome__title {
+    font-size: calc(23px + 25 * (100vw / 1920));
+  }
+
+  .welcome__subtitle {
+    font-size: calc(14px + 1 * (100vw / 1920));
+  }
+
+  .products__title {
+    font-size: calc(22px + 10 * (100vw / 1920));
+  }
+}
+
 @media (max-width: 1200px) {
   .menu__item:not(:last-child) {
     margin-right: calc(5px + 25 * ((100vw - 320px) / 1600));
@@ -577,15 +609,27 @@ h6 {
   }
 
   .welcome__btn {
-    padding-bottom: calc(14px + 6 * ((100vw - 320px) / 880));
-  }
-
-  .welcome__btn {
     padding-right: calc(20px + 10 * ((100vw - 320px) / 880));
   }
 
   .welcome__btn {
+    padding-bottom: calc(14px + 6 * ((100vw - 320px) / 880));
+  }
+
+  .welcome__btn {
     padding-left: calc(20px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .products {
+    padding-top: calc(30px + 27 * ((100vw - 320px) / 880));
+  }
+
+  .products {
+    padding-bottom: calc(30px + 20 * ((100vw - 320px) / 880));
+  }
+
+  .products__head {
+    padding-bottom: calc(30px + 27 * ((100vw - 320px) / 880));
   }
 
   .products__btn {
@@ -628,6 +672,24 @@ h6 {
 
   .menu {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu__link {
+    font-size: calc(11px + 5.1 * ((100vw - 320px) / 1920));
+  }
+
+  .welcome__title {
+    font-size: calc(23px + 42.5 * ((100vw - 320px) / 1920));
+  }
+
+  .welcome__subtitle {
+    font-size: calc(14px + 1.7 * ((100vw - 320px) / 1920));
+  }
+
+  .products__title {
+    font-size: calc(22px + 17 * ((100vw - 320px) / 1920));
   }
 }
 

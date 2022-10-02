@@ -6,7 +6,6 @@
     height: calc(100vh - 60px);
     @include adaptiveValue('padding-top', 145, 25, 1);
 
-
     &__nav {
         display: flex;
         flex-direction: column;
@@ -29,8 +28,8 @@
         background-color: $bluegreyColor;
         border-radius: $mainRadius;
         @include adaptiveValue('padding-top', 20, 14, 1);
-        @include adaptiveValue('padding-bottom', 20, 14, 1);
         @include adaptiveValue('padding-right', 30, 20, 1);
+        @include adaptiveValue('padding-bottom', 20, 14, 1);
         @include adaptiveValue('padding-left', 30, 20, 1);
         color: $whiteColor;
         text-transform: uppercase;
