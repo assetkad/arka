@@ -1,0 +1,51 @@
+.boxes {
+    @include adaptiveValue('padding-top', 70, 35, 0);
+    @include adaptiveValue('padding-bottom', 70, 35, 0);
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $boxesBg;
+        @include adaptiveValue('padding-top', 88, 55, 0);
+        @include adaptiveValue('padding-bottom', 88, 55, 0);
+
+    }
+
+    &__title {
+        text-align: center;
+        color: $blueDarker;
+        @include adaptiveFont(32, 22);
+    }
+
+    &__cards {
+        display: flex;
+        @include adaptiveValue('margin-top', 45, 25, 0);
+        @include adaptiveValue('margin-bottom', 75, 35, 0);
+
+    }
+
+    &__card {
+        height: 391px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            font-size: 18px;
+            line-height: 23px;
+            width: 200px;
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            padding-top: 10px;
+            font-size: 15px;
+            width: 200px;
+            line-height: 24px;
+            text-align: center;
+            color: $bluegreyColor;
+        }
+    }
+}

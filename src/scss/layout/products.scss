@@ -17,25 +17,6 @@
         display: inline-block;
     }
 
-    &__btn {
-        font-weight: 700;
-        letter-spacing: 1.96px;
-        border: none;
-        background-color: $bluegreyColor;
-        border-radius: $mainRadius;
-        @include adaptiveValue('padding-top', 13, 8, 1);
-        @include adaptiveValue('padding-bottom', 13, 8, 1);
-        @include adaptiveValue('padding-right', 25, 13, 1);
-        @include adaptiveValue('padding-left', 25, 13, 1);
-        color: $whiteColor;
-        text-transform: uppercase;
-
-        &--bgWhite {
-            background-color: $whiteColor;
-            color: $bluegreyColor;
-        }
-    }
-
     &__items {
         display: grid;
         grid-template: repeat(auto-fill, minmax(432px, auto))/repeat(auto-fill, 399px);
@@ -55,6 +36,7 @@
         display: flex;
         justify-content: center;
         @include adaptiveValue('margin-top', 45, 25, 0);
+
         &__wrapper {
             &__span {
                 font-weight: 700;

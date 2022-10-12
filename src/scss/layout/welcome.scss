@@ -9,6 +9,7 @@
     &__nav {
         display: flex;
         flex-direction: column;
+        @include adaptiveValue('margin-bottom', 15, 13, 0);
     }
 
     &__title {
@@ -19,20 +20,5 @@
     &__subtitle {
         @include adaptiveFont(15, 14);
         @include adaptiveValue('margin-top', 33, 20, 0);
-    }
-
-    &__btn {
-        font-weight: 700;
-        letter-spacing: 1.96px;
-        border: none;
-        background-color: $bluegreyColor;
-        border-radius: $mainRadius;
-        @include adaptiveValue('padding-top', 20, 14, 1);
-        @include adaptiveValue('padding-right', 30, 20, 1);
-        @include adaptiveValue('padding-bottom', 20, 14, 1);
-        @include adaptiveValue('padding-left', 30, 20, 1);
-        color: $whiteColor;
-        text-transform: uppercase;
-        margin-top: 15px;
     }
 }
